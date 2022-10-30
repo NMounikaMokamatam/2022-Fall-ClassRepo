@@ -5,7 +5,7 @@
 
 <template>
   <main>
-    <h1 class="title">Store Home</h1>
-    <h2 class="subtitle">Welcome to the Store</h2>
+    <h1 class="title">Home Page</h1>
+    <h2 class="subtitle">The page where you land</h2>
   </main>
 </template>
