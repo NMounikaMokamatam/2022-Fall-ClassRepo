@@ -3,11 +3,12 @@
 import { computed, reactive, ref, watch } from "vue";
     import { RouterLink } from "vue-router";
     import { getProducts, type Product } from "../stores/products";
-
-    const products = reactive(getProducts());
-
+    // const products = ref([] as Product[]);
+    // getProducts().then( x=> products.value = x);
+    const products = reactive([] as Product[]);
+    getProducts().then( x=> products.push(...x));
+    
     const search = ref("");
-
     function addToCart(product: Product) {
         addProductToCart(product);
     }
@@ -46,11 +47,9 @@ import { computed, reactive, ref, watch } from "vue";
         flex-wrap: wrap;
         background-color: aliceblue;
     }
-
     .add {
         float: right;
     }
-
     .product {
         flex-basis: 10em;
         margin: 1em;
@@ -59,16 +58,13 @@ import { computed, reactive, ref, watch } from "vue";
         border-radius: 5px;
         background-color: #fff;
     }
-
     .product-info {
         font-size: small;
     }
-
     .price {
         display: flex;
         align-items: flex-start;
     }
-
     .amount {
         font-size: x-large;
     }

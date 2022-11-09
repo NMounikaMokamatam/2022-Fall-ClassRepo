@@ -3,10 +3,8 @@
     import { RouterLink } from 'vue-router';
     import Cart from './Cart.vue';
     import LoginBadge from './LoginBadge.vue';
-
     const isActive = ref(false);
     const isCartOpen = ref(false);
-
 </script>
 
 <template>

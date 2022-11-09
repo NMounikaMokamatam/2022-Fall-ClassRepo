@@ -2,19 +2,14 @@
     import FlyoutPanel from './FlyoutPanel.vue';
     import cart, { updateProductQuantity } from "../stores/cart"; 
 import { computed } from 'vue';
-
     const { isOpen } = defineProps<{
         isOpen: boolean;
     }>();
-
-
     function closeCart() {
         //isActive = false;
     }
-
     function checkout() {
     }
-
     const subtotal = computed(() => cart.reduce((total, item) => total + item.quantity * item.product.price, 0));
 </script>
 
@@ -74,7 +69,6 @@ import { computed } from 'vue';
     .price {
         font-size: 1.5em;
     }
-
     .quantity {
         width: 40px;
         border-radius: 10px;
