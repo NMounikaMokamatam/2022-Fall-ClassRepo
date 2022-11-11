@@ -1,16 +1,14 @@
-const express = require('express')
-const app = express()
+const data = require('../data/products.json');
 
-const hostname = '127.0.0.1';
-const port = process.env.PORT || 3000;
+function getProducts() {
+    return data;
+}
 
-app.get('/', (req, res) => {
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/plain');
-    res.end('Happy Sweet New Year');
-})
+function getProduct(id) {
+    return data.products.find(p => p.id === id);
+}
 
-
-app.listen(port, () => {
-    console.log(`Server running at http://${hostname}:${port}/`);
-});
+module.exports = {
+    getProducts,
+    getProduct
+};
