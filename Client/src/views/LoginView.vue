@@ -1,9 +1,11 @@
 <script setup lang="ts">
     import { login } from '@/stores/session';
     import { ref } from 'vue';
+
     const email = ref('');
     const password = ref('');
     const name = ref('');
+
 </script>
 
 <template>
@@ -39,4 +41,5 @@
 
 
 <style scoped>
+
 </style>
