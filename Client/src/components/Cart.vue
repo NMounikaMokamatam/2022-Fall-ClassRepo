@@ -24,7 +24,7 @@ import { isLoading } from '@/stores/session';
             <template #header>
                 <h3 class="title is-3">
                     Cart 
-                    <small class="subtitle is-6">({{ cart.length }} items)</small>
+                    <small class="subtitle is-6">({{cart.length }} items)</small>
                 </h3>
                 <h4 class="subtitle is-6">
                     <b>Subtotal:</b> ${{ subtotal }}
